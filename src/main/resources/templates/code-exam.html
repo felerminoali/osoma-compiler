@@ -1,0 +1,273 @@
+<html >
+<head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            bottom: 10px;
+            left: 0;
+            border: 1px solid grey;
+            width: 50%;
+        }
+    </style>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <!--    awesome font-->
+    <link rel="stylesheet" href="/assets/bootstrap/css/font-awesome.css">
+    <!-- Custom Theme files -->
+    <!--<link href="css/style.css" rel='stylesheet' type='text/css'/>-->
+    <link rel="stylesheet" href="/assets/bootstrap/css/style.css">
+
+
+    <!--    web fonts-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.min.js"></script>
+
+    <!--    bootstrap js-->
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--validation-->
+</head>
+<body style="background-color: white">
+
+<nav class="navbar navbar-fixed-top navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="logo">
+                <a href="/"><img src="/images/logo2.png" title="logo"/></a>
+            </div>
+        </div>
+
+    </div>
+
+</nav>
+
+    <div class="row">
+
+
+        <div id="editor">package mz.edu.osoma.javacompiler.controller;
+
+            public class Program {
+
+            public static void main(String[] args) {
+            System.out.println("Hello World!"+(1));
+            }
+            }
+        </div>
+
+
+        <div class="col-lg-6 pull-right">
+
+            <div class="row col-white">
+                <div>
+                    <form action="/exams/result" method="post" autocomplete="off" id="questionform">
+                        <input type="hidden" id="timeoutinput" name="na1" value="na">
+                        <input type="hidden" id="finishnowinput" name="na2" value="na">
+                        <input type="hidden" id="examid" name="examid" value="119">
+                        <input type="hidden" id="starttimestamp" name="starttimestamp"
+                               value="13 abr 2020, 11:58:44">
+
+                        <div id="question_container">
+                            <div class="single_question_box">
+
+                                <div class="qbox">
+                                    <div class="qboxleft">
+                                        <div id="paging"><h4>Questão <span id="q_index">1</span> de <span>22</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="col600 qsholder editor">
+                                    <p>
+                                    </p>
+                                    <dl id="question_div">
+                                        <dd>
+                                            <div class="media">
+
+
+                                                <div class="media-left" id="q_img">
+
+                                                </div>
+
+
+                                                <div class="media-body">
+                                                    <h4 class="media-heading" id="q_question"><span
+                                                            style="display: inline;">Em qual tipo de controlo de processo o scrum é baseado?</span>
+                                                    </h4>
+                                                    <br/>
+
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="myModal" tabindex="-1"
+                                                         role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog modal-lg" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close"><span
+                                                                            aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title"
+                                                                        id="myModalLabel">
+                                                                        Texto</h4>
+                                                                </div>
+                                                                <div class="modal-body"
+                                                                     id="q_caseofstudy"></div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                            class="btn btn-default"
+                                                                            data-dismiss="modal">Close
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                    <p></p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <!--</div>-->
+                </div>
+
+            </div>
+
+            <br/>
+            <br/>
+            <br/>
+
+            <div class="row">
+
+                <div class="col-lg-2">
+                    <button class="btn btn-info" id="execute">Executar</button>
+                </div>
+
+                <div class="col-lg-10">
+                    <div id="text">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-white">
+
+                <br/>
+
+                <div>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#output">Output</a></li>
+                        <li><a data-toggle="tab" href="#test">Testes</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="test" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-md-12" style="padding: 10px;">
+                                    <p>$2.6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="output" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-md-12" style="padding: 10px;">
+                                    <p>Compilation OK, but 2 out of 2 tests cases fail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="dotted"></div>
+                    <div class="nextprev">
+                        <div class="prevbox">
+
+                        </div>
+
+                        <div class="nextbox">
+
+                            <a id="qnext" class="btn btn-danger next">Seguinte
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+
+
+                            <a href="#" id="qfinish" class="btn btn-success t_finish" data-toggle="modal"
+                               data-target="#mi-modal">Terminar<i class="glyphicon glyphicon-chevron-up"></i></a>
+
+                            <a href="#" class="btn btn-info showlist" id="btnShow">Respostas</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        document.getElementById('editor').style.fontSize='12px';
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/eclipse");
+        editor.session.setMode("ace/mode/java");
+
+        if ($('#execute').length > 0) {
+            ($('#execute').click(function () {
+                // var code = editor.getValue();
+
+                var  code = "aaa";
+                $.ajax({
+                    url: "/execute",
+                    method: "GET",
+                    // data: ({code: code}),
+                    dataType: "json",
+                    success: function (data) {
+                        if (data != null) {
+                            alert(data.resultExec.exit);
+                        }
+                    },
+                    error: function (xhr, textStatus, error) {
+                        console.log(xhr.statusText);
+                        console.log(textStatus);
+                        console.log(error);
+                    }
+                });
+            }));
+        }
+
+    </script>
+    <script>
+
+
+
+
+    </script>
+
+
+</body>
+</html>
